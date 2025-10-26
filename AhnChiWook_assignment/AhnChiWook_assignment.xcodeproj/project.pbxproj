@@ -22,6 +22,9 @@
 		F66D23DC2EACAC5C00DB549E /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F66D23CD2EACAC5C00DB549E /* Pretendard-ExtraBold.otf */; };
 		F66D23DF2EADEAA700DB549E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F66D23DE2EADEAA700DB549E /* SnapKit */; };
 		F66D23E22EADEAB200DB549E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F66D23E12EADEAB200DB549E /* Then */; };
+		F66D24082EAE338400DB549E /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24072EAE338400DB549E /* UIFont+.swift */; };
+		F66D240A2EAE356A00DB549E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24092EAE356A00DB549E /* UITextField+.swift */; };
+		F66D240C2EAE35B700DB549E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D240B2EAE35B700DB549E /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		F66D23D12EACAC5C00DB549E /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		F66D23D22EACAC5C00DB549E /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		F66D23D32EACAC5C00DB549E /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		F66D24072EAE338400DB549E /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		F66D24092EAE356A00DB549E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		F66D240B2EAE35B700DB549E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 		F66D23C92EACAC0000DB549E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F66D240B2EAE35B700DB549E /* UIView+.swift */,
+				F66D24092EAE356A00DB549E /* UITextField+.swift */,
+				F66D24072EAE338400DB549E /* UIFont+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66D240C2EAE35B700DB549E /* UIView+.swift in Sources */,
+				F66D24082EAE338400DB549E /* UIFont+.swift in Sources */,
+				F66D240A2EAE356A00DB549E /* UITextField+.swift in Sources */,
 				F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */,
 				F66D23C42EACABEA00DB549E /* SceneDelegate.swift in Sources */,
 			);
