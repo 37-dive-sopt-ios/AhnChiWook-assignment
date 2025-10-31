@@ -1,6 +1,15 @@
 {
-  "originHash" : "0cd11a4ea344b95c25e88fb39b351003de5b41040e76927e86f0f8b8a4edc7a3",
+  "originHash" : "a0e604d642aa7fffff4245099cf3cfb9f6a1924b7c13a02095079d0b1ea6d705",
   "pins" : [
+    {
+      "identity" : "skyfloatinglabeltextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Skyscanner/SkyFloatingLabelTextField.git",
+      "state" : {
+        "revision" : "a0750ebbc7311f3b3debf99c5e59338e854afa59",
+        "version" : "4.0.0"
+      }
+    },
     {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
@@ -17,6 +26,15 @@
       "state" : {
         "revision" : "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
         "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "toast-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scalessec/Toast-Swift",
+      "state" : {
+        "revision" : "ddccd20d6fb718448d9b179c454c561653fda7d5",
+        "version" : "5.1.1"
       }
     }
   ],
