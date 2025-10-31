@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6554D062EAFEF0200D6200C /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = F6554D052EAFEF0200D6200C /* Toast */; };
 		F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D23BC2EACABEA00DB549E /* AppDelegate.swift */; };
 		F66D23C42EACABEA00DB549E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D23C12EACABEA00DB549E /* SceneDelegate.swift */; };
 		F66D23C52EACABEA00DB549E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66D23BD2EACABEA00DB549E /* Assets.xcassets */; };
@@ -25,6 +26,13 @@
 		F66D24082EAE338400DB549E /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24072EAE338400DB549E /* UIFont+.swift */; };
 		F66D240A2EAE356A00DB549E /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24092EAE356A00DB549E /* UITextField+.swift */; };
 		F66D240C2EAE35B700DB549E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D240B2EAE35B700DB549E /* UIView+.swift */; };
+		F66D24102EAE413A00DB549E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D240F2EAE413200DB549E /* LoginViewController.swift */; };
+		F66D24122EAE50CA00DB549E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24112EAE50C600DB549E /* String+.swift */; };
+		F67D12222EB28AFB00C510C7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */; };
+		F6ED9FB32EB4317C00AC1470 /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = F6ED9FB22EB4317C00AC1470 /* SkyFloatingLabelTextField */; };
+		F6ED9FF42EB4DFE100AC1470 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED9FF32EB4DFE100AC1470 /* CustomTextField.swift */; };
+		F6EF2EAC2EAF68F400ACCFA2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF2EAB2EAF68F400ACCFA2 /* BaseViewController.swift */; };
+		F6EF2EAE2EAF6D1500ACCFA2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,12 @@
 		F66D24072EAE338400DB549E /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		F66D24092EAE356A00DB549E /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		F66D240B2EAE35B700DB549E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		F66D240F2EAE413200DB549E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F66D24112EAE50C600DB549E /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		F6ED9FF32EB4DFE100AC1470 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F6EF2EAB2EAF68F400ACCFA2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6554D062EAFEF0200D6200C /* Toast in Frameworks */,
+				F6ED9FB32EB4317C00AC1470 /* SkyFloatingLabelTextField in Frameworks */,
 				F66D23DF2EADEAA700DB549E /* SnapKit in Frameworks */,
 				F66D23E22EADEAB200DB549E /* Then in Frameworks */,
 			);
@@ -80,6 +96,7 @@
 		F66D23C22EACABEA00DB549E /* AhnChiWook_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F66D240E2EAE410200DB549E /* Presentation */,
 				F66D23C82EACABED00DB549E /* Global */,
 				F66D23BC2EACABEA00DB549E /* AppDelegate.swift */,
 				F66D23BE2EACABEA00DB549E /* Info.plist */,
@@ -92,6 +109,8 @@
 		F66D23C82EACABED00DB549E /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				F67D12202EB28AE200C510C7 /* Components */,
+				F6EF2EAA2EAF68BC00ACCFA2 /* Base */,
 				F66D23CA2EACAC4000DB549E /* Fonts */,
 				F66D23C92EACAC0000DB549E /* Extensions */,
 				F66D23BD2EACABEA00DB549E /* Assets.xcassets */,
@@ -102,6 +121,7 @@
 		F66D23C92EACAC0000DB549E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F66D24112EAE50C600DB549E /* String+.swift */,
 				F66D240B2EAE35B700DB549E /* UIView+.swift */,
 				F66D24092EAE356A00DB549E /* UITextField+.swift */,
 				F66D24072EAE338400DB549E /* UIFont+.swift */,
@@ -125,6 +145,32 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F66D240E2EAE410200DB549E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */,
+				F66D240F2EAE413200DB549E /* LoginViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F67D12202EB28AE200C510C7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6ED9FF32EB4DFE100AC1470 /* CustomTextField.swift */,
+				F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F6EF2EAA2EAF68BC00ACCFA2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6EF2EAB2EAF68F400ACCFA2 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +190,8 @@
 			packageProductDependencies = (
 				F66D23DE2EADEAA700DB549E /* SnapKit */,
 				F66D23E12EADEAB200DB549E /* Then */,
+				F6554D052EAFEF0200D6200C /* Toast */,
+				F6ED9FB22EB4317C00AC1470 /* SkyFloatingLabelTextField */,
 			);
 			productName = AhnChiWook_assignment;
 			productReference = F66D23A42EA8E97C00DB549E /* AhnChiWook_assignment.app */;
@@ -176,6 +224,8 @@
 			packageReferences = (
 				F66D23DD2EADEAA700DB549E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F66D23E02EADEAB200DB549E /* XCRemoteSwiftPackageReference "Then" */,
+				F6554D042EAFEF0200D6200C /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				F6ED9FB12EB4317C00AC1470 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F66D23A52EA8E97C00DB549E /* Products */;
@@ -213,10 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6EF2EAE2EAF6D1500ACCFA2 /* WelcomeViewController.swift in Sources */,
+				F6ED9FF42EB4DFE100AC1470 /* CustomTextField.swift in Sources */,
+				F66D24102EAE413A00DB549E /* LoginViewController.swift in Sources */,
 				F66D240C2EAE35B700DB549E /* UIView+.swift in Sources */,
 				F66D24082EAE338400DB549E /* UIFont+.swift in Sources */,
+				F67D12222EB28AFB00C510C7 /* CustomNavigationBar.swift in Sources */,
 				F66D240A2EAE356A00DB549E /* UITextField+.swift in Sources */,
 				F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */,
+				F6EF2EAC2EAF68F400ACCFA2 /* BaseViewController.swift in Sources */,
+				F66D24122EAE50CA00DB549E /* String+.swift in Sources */,
 				F66D23C42EACABEA00DB549E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +494,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F6554D042EAFEF0200D6200C /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		F66D23DD2EADEAA700DB549E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -454,9 +518,22 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		F6ED9FB12EB4317C00AC1470 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Skyscanner/SkyFloatingLabelTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F6554D052EAFEF0200D6200C /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6554D042EAFEF0200D6200C /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		F66D23DE2EADEAA700DB549E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F66D23DD2EADEAA700DB549E /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -466,6 +543,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F66D23E02EADEAB200DB549E /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		F6ED9FB22EB4317C00AC1470 /* SkyFloatingLabelTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6ED9FB12EB4317C00AC1470 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */;
+			productName = SkyFloatingLabelTextField;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

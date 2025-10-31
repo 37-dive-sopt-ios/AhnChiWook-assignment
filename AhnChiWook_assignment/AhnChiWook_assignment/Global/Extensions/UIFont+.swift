@@ -44,4 +44,10 @@ extension UIFont {
         
         return pretendardFont
     }
+    
+    static let head_b_24 = UIFont.pretendard(.bold, size: 24)
+    static let head_b_18 = UIFont.pretendard(.bold, size: 18)
+    static let title_sb_18 = UIFont.pretendard(.semiBold, size: 18)
+    static let body_r_14 = UIFont.pretendard(.regular, size: 14)
+    static let caption_r_10 = UIFont.pretendard(.regular, size: 10)
 }
