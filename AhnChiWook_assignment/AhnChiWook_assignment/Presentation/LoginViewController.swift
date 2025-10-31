@@ -201,6 +201,7 @@ class LoginViewController: BaseViewController {
         emailTextField.text = nil
         passwordTextField.text = nil
         passwordTextField.isSecureTextEntry = true
+        secureButton.setImage(passwordTextField.isSecureTextEntry ? .eyeSlash : .eye, for: .normal)
     }
     
     @objc
@@ -211,8 +212,8 @@ class LoginViewController: BaseViewController {
     @objc
     private func secureButtonTapped() {
         let isSecure = passwordTextField.isSecureTextEntry
-        passwordTextField.isSecureTextEntry.toggle()
         secureButton.setImage(isSecure ? .eye : .eyeSlash, for: .normal)
+        passwordTextField.isSecureTextEntry.toggle()
     }
     
     @objc
