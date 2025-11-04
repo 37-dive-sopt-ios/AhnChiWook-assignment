@@ -148,8 +148,8 @@
 		F66D240E2EAE410200DB549E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */,
 				F66D240F2EAE413200DB549E /* LoginViewController.swift */,
+				F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
