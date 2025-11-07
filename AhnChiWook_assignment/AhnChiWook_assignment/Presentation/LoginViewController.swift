@@ -13,48 +13,51 @@ import Then
 import Toast
 
 
-class LoginViewController: BaseViewController {
+final class LoginViewController: BaseViewController {
     
     
     // MARK: - Properties
     
-    private let naviBar = CustomNavigationBar()
+    private lazy var naviBar = CustomNavigationBar().then {
+        $0.setTitle("이메일 또는 아이디로 계속")
+    }
     
-    private lazy var emailTextField = UITextField().then {
-        $0.placeholder = "이메일 또는 아이디를 입력해 주세요"
-        $0.setPlaceholderColor(.baeminGray700)
-        $0.font = .body_r_14
-        $0.backgroundColor = .baeminWhite
-        $0.clearButtonMode = .whileEditing
-        $0.addLeftPadding(10)
-        $0.autocapitalizationType = .none
-        $0.layer.cornerRadius = 4
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.baeminGray200.cgColor
-        $0.textColor = .baeminBlack
-        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
-    }
+//    private lazy var emailTextField = UITextField().then {
+//        $0.placeholder = "이메일 또는 아이디를 입력해 주세요"
+//        $0.setPlaceholderColor(.baeminGray700)
+//        $0.font = .body_r_14
+//        $0.backgroundColor = .baeminWhite
+//        $0.clearButtonMode = .whileEditing
+//        $0.addLeftPadding(10)
+//        $0.autocapitalizationType = .none
+//        $0.layer.cornerRadius = 4
+//        $0.layer.borderWidth = 1
+//        $0.layer.borderColor = UIColor.baeminGray200.cgColor
+//        $0.textColor = .baeminBlack
+//        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
+//    }
+    private lazy var emailTextField = makeTextField( placeholder: "이메일 또는 아이디를 입력해 주세요" )
+    private lazy var passwordTextField = makeTextField( placeholder: "비밀번호", isSecure: true )
 
-    private lazy var passwordTextField = UITextField().then {
-        $0.placeholder = "비밀번호"
-        $0.setPlaceholderColor(.baeminGray700)
-        $0.font = .body_r_14
-        $0.backgroundColor = .baeminWhite
-        $0.addLeftPadding(10)
-        $0.isSecureTextEntry = true
-        $0.autocapitalizationType = .none
-        $0.layer.cornerRadius = 4
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.baeminGray200.cgColor
-        $0.textColor = .baeminBlack
-        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
-    }
+//    private lazy var passwordTextField = UITextField().then {
+//        $0.placeholder = "비밀번호"
+//        $0.setPlaceholderColor(.baeminGray700)
+//        $0.font = .body_r_14
+//        $0.backgroundColor = .baeminWhite
+//        $0.addLeftPadding(10)
+//        $0.isSecureTextEntry = true
+//        $0.autocapitalizationType = .none
+//        $0.layer.cornerRadius = 4
+//        $0.layer.borderWidth = 1
+//        $0.layer.borderColor = UIColor.baeminGray200.cgColor
+//        $0.textColor = .baeminBlack
+//        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
+//    }
     
     private lazy var clearButton = UIButton().then {
         $0.setImage(.clear, for: .normal)
         $0.isHidden = true
         $0.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
-        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEvents)
     }
     
     private lazy var secureButton = UIButton().then {
@@ -88,10 +91,6 @@ class LoginViewController: BaseViewController {
     
     private let moreImageView = UIImageView().then {
         $0.image = .moreButton
-    }
-    
-    override func setStyle() {
-        naviBar.setTitle("이메일 또는 아이디로 계속")
     }
     
     override func setUI() {
@@ -146,13 +145,13 @@ class LoginViewController: BaseViewController {
         secureButton.snp.makeConstraints {
             $0.centerY.equalTo(rightView.snp.centerY)
             $0.trailing.equalToSuperview()
-            $0.height.width.equalTo(20)
+            $0.size.equalTo(20)
         }
         
         clearButton.snp.makeConstraints {
             $0.centerY.equalTo(rightView.snp.centerY)
             $0.trailing.equalTo(secureButton.snp.leading).offset(-16)
-            $0.height.width.equalTo(20)
+            $0.size.equalTo(20)
         }
         
         loginButton.snp.makeConstraints {
@@ -177,13 +176,31 @@ class LoginViewController: BaseViewController {
         
         moreImageView.snp.makeConstraints {
             $0.centerY.trailing.equalToSuperview()
-            $0.height.width.equalTo(12)
+            $0.size.equalTo(12)
         }
     }
     
     override func setDelegate() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    private func makeTextField( placeholder: String, isSecure: Bool = false ) -> UITextField {
+        let textField = UITextField()
+        textField.placeholder = placeholder
+        textField.setPlaceholderColor(.baeminGray700)
+        textField.font = .body_r_14
+        textField.backgroundColor = .baeminWhite
+        textField.addLeftPadding(10)
+        textField.autocapitalizationType = .none
+        textField.layer.cornerRadius = 4
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.baeminGray200.cgColor
+        textField.textColor = .baeminBlack
+        textField.isSecureTextEntry = isSecure
+        textField.clearButtonMode = isSecure ? .never : .whileEditing
+        textField.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
+        return textField
     }
     
     private func pushToWelcome() {
@@ -207,6 +224,7 @@ class LoginViewController: BaseViewController {
     @objc
     private func clearButtonTapped() {
         passwordTextField.text = nil
+        updateLoginButtonState()
     }
     
     @objc
@@ -238,6 +256,16 @@ class LoginViewController: BaseViewController {
         
         loginButton.isEnabled = canLogin
         loginButton.backgroundColor = canLogin ? .baeminMint500 : .baeminGray200
+        
+        if passwordTextField.text?.isEmpty == false {
+            clearButton.isHidden = false
+            secureButton.isHidden = false
+        }
+        else
+        {
+            clearButton.isHidden = true
+            secureButton.isHidden = true
+        }
     }
     
     @objc
@@ -250,18 +278,10 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.baeminBlack.cgColor
         textField.layer.borderWidth = 2
-        if textField == passwordTextField {
-            clearButton.isHidden = false
-            secureButton.isHidden = false
-        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.baeminGray200.cgColor
         textField.layer.borderWidth = 1
-        if textField == passwordTextField {
-            clearButton.isHidden = true
-            secureButton.isHidden = true
-        }
     }
 }
