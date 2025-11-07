@@ -19,7 +19,9 @@ final class WelcomeViewController: BaseViewController {
     
     var email: String?
     
-    private let naviBar = CustomNavigationBar()
+    private lazy var naviBar = CustomNavigationBar().then {
+        $0.setTitle("대체 뼈찜 누가 시켰어!!")
+    }
     
     private let welcomeImage = UIImageView().then {
         $0.image = .image21
@@ -50,7 +52,6 @@ final class WelcomeViewController: BaseViewController {
     // MARK: - Setting Method
     
     override func setStyle() {
-        naviBar.setTitle("대체 뼈찜 누가 시켰어??")
         bindEmail()
     }
     
@@ -108,3 +109,4 @@ final class WelcomeViewController: BaseViewController {
         loginDataCompletion?()
     }
 }
+
