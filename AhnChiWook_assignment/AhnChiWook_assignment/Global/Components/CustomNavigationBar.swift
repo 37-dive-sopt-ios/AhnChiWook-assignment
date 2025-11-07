@@ -50,7 +50,6 @@ final class CustomNavigationBar: UIView {
     // MARK: - Set
     
     private func setLayout() {
-        //backgroundColor = .systemBackground
         
         addSubviews(
             backButton,

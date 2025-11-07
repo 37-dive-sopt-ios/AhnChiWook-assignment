@@ -22,37 +22,9 @@ final class LoginViewController: BaseViewController {
         $0.setTitle("이메일 또는 아이디로 계속")
     }
     
-//    private lazy var emailTextField = UITextField().then {
-//        $0.placeholder = "이메일 또는 아이디를 입력해 주세요"
-//        $0.setPlaceholderColor(.baeminGray700)
-//        $0.font = .body_r_14
-//        $0.backgroundColor = .baeminWhite
-//        $0.clearButtonMode = .whileEditing
-//        $0.addLeftPadding(10)
-//        $0.autocapitalizationType = .none
-//        $0.layer.cornerRadius = 4
-//        $0.layer.borderWidth = 1
-//        $0.layer.borderColor = UIColor.baeminGray200.cgColor
-//        $0.textColor = .baeminBlack
-//        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
-//    }
     private lazy var emailTextField = makeTextField( placeholder: "이메일 또는 아이디를 입력해 주세요" )
+    
     private lazy var passwordTextField = makeTextField( placeholder: "비밀번호", isSecure: true )
-
-//    private lazy var passwordTextField = UITextField().then {
-//        $0.placeholder = "비밀번호"
-//        $0.setPlaceholderColor(.baeminGray700)
-//        $0.font = .body_r_14
-//        $0.backgroundColor = .baeminWhite
-//        $0.addLeftPadding(10)
-//        $0.isSecureTextEntry = true
-//        $0.autocapitalizationType = .none
-//        $0.layer.cornerRadius = 4
-//        $0.layer.borderWidth = 1
-//        $0.layer.borderColor = UIColor.baeminGray200.cgColor
-//        $0.textColor = .baeminBlack
-//        $0.addTarget(self, action: #selector(updateLoginButtonState), for: .allEditingEvents)
-//    }
     
     private lazy var clearButton = UIButton().then {
         $0.setImage(.clear, for: .normal)
