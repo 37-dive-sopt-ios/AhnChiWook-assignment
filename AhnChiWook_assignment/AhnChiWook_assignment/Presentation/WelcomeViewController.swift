@@ -40,12 +40,12 @@ final class WelcomeViewController: BaseViewController {
     }
     
     private lazy var backButton = UIButton().then {
-        $0.setTitle("뒤로가기", for: .normal)
+        $0.setTitle("메인으로 가기", for: .normal)
         $0.backgroundColor = .baeminMint500
         $0.titleLabel?.font = .title_sb_18
         $0.setTitleColor(.baeminWhite, for: .normal)
         $0.layer.cornerRadius = 4
-        $0.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(mainButtonDidTap), for: .touchUpInside)
     }
     
     
@@ -104,9 +104,17 @@ final class WelcomeViewController: BaseViewController {
     }
     
     @objc
+    private func mainButtonDidTap() {
+        _ = UINavigationController(rootViewController: TabbarController())
+        self.navigationController?.pushViewController(TabbarController(), animated: true)
+        
+    }
+    
+    @objc
     private func backButtonDidTap() {
         self.navigationController?.popViewController(animated: true)
         loginDataCompletion?()
     }
 }
 
+#Preview { WelcomeViewController() }

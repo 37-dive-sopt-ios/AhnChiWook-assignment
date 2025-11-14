@@ -47,7 +47,18 @@ extension UIFont {
     
     static let head_b_24 = UIFont.pretendard(.bold, size: 24)
     static let head_b_18 = UIFont.pretendard(.bold, size: 18)
+    static let head_b_16 = UIFont.pretendard( .bold, size: 16)
+    static let head_b_14 = UIFont.pretendard( .bold, size: 14)
+    static let head_b_13 = UIFont.pretendard( .bold, size: 13)
+    
     static let title_sb_18 = UIFont.pretendard(.semiBold, size: 18)
+    static let title_sb_14 = UIFont.pretendard(.semiBold, size: 14)
+    static let title_sb_10 = UIFont.pretendard( .semiBold, size: 10)
+    
     static let body_r_14 = UIFont.pretendard(.regular, size: 14)
+    static let body_r_13 = UIFont.pretendard( .regular, size: 13)
+    static let body_r_12 = UIFont.pretendard( .regular, size: 12)
+    static let body_r_10 = UIFont.pretendard( .regular, size: 10)
+    
     static let caption_r_10 = UIFont.pretendard(.regular, size: 10)
 }
