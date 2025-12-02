@@ -76,7 +76,8 @@ final class CustomNavigationBar: UIView {
     
     // MARK: - Action Handlers
     
-    @objc private func backButtonTapped() {
+    @objc
+    private func backButtonTapped() {
         onBackButtonTap?()
         print("back button tapped")
     }
