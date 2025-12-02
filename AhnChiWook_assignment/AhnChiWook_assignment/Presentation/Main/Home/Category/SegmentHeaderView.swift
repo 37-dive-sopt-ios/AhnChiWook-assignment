@@ -21,7 +21,7 @@ final class SegmentHeaderView: UICollectionReusableView {
     
     private let stack = UIStackView().then {
         $0.axis = .horizontal
-        //$0.spacing = 20
+        $0.spacing = 20
     }
     
     private let indicator = UIView().then {

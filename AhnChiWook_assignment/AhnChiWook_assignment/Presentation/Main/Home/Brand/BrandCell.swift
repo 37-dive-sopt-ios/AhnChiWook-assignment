@@ -15,9 +15,11 @@ final class BrandCell: UICollectionViewCell {
     
     static let reuseId = "BrandCell"
     
-    private let icon = UIView().then {
+    private let icon = UIImageView().then {
         $0.backgroundColor = .systemGray6
+        $0.contentMode = .scaleAspectFit
         $0.layer.cornerRadius = 16
+        $0.clipsToBounds = true
     }
     private let label = UILabel().then {
         $0.font = .systemFont(ofSize: 12)
@@ -44,5 +46,6 @@ final class BrandCell: UICollectionViewCell {
     
     func configure(_ brand: BrandItem) {
         label.text = brand.title
+        icon.image = brand.icon
     }
 }

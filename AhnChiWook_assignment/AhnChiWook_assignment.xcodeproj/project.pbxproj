@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60B50142EDEEF42004278B8 /* Reusable+Dequeuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B50132EDEEF42004278B8 /* Reusable+Dequeuable.swift */; };
+		F60B50162EDEEFD2004278B8 /* StoreSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B50152EDEEFD2004278B8 /* StoreSectionCell.swift */; };
+		F60B50182EDEEFE8004278B8 /* StoreSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B50172EDEEFE8004278B8 /* StoreSectionHeaderView.swift */; };
+		F60B501C2EDEF003004278B8 /* StorePreviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B501B2EDEF003004278B8 /* StorePreviewItem.swift */; };
 		F6554D062EAFEF0200D6200C /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = F6554D052EAFEF0200D6200C /* Toast */; };
 		F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D23BC2EACABEA00DB549E /* AppDelegate.swift */; };
 		F66D23C42EACABEA00DB549E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D23C12EACABEA00DB549E /* SceneDelegate.swift */; };
@@ -54,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60B50132EDEEF42004278B8 /* Reusable+Dequeuable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+Dequeuable.swift"; sourceTree = "<group>"; };
+		F60B50152EDEEFD2004278B8 /* StoreSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSectionCell.swift; sourceTree = "<group>"; };
+		F60B50172EDEEFE8004278B8 /* StoreSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSectionHeaderView.swift; sourceTree = "<group>"; };
+		F60B501B2EDEF003004278B8 /* StorePreviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreviewItem.swift; sourceTree = "<group>"; };
 		F66D23A42EA8E97C00DB549E /* AhnChiWook_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhnChiWook_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66D23BC2EACABEA00DB549E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66D23BD2EACABEA00DB549E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 		F66D23C92EACAC0000DB549E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F60B50132EDEEF42004278B8 /* Reusable+Dequeuable.swift */,
 				F66D24112EAE50C600DB549E /* String+.swift */,
 				F66D240B2EAE35B700DB549E /* UIView+.swift */,
 				F66D24092EAE356A00DB549E /* UITextField+.swift */,
@@ -231,12 +240,13 @@
 		F6FAA9252EC6F47600CBFA73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F60B501B2EDEF003004278B8 /* StorePreviewItem.swift */,
+				F60B50172EDEEFE8004278B8 /* StoreSectionHeaderView.swift */,
+				F60B50152EDEEFD2004278B8 /* StoreSectionCell.swift */,
 				F6FAA9432EC7061D00CBFA73 /* HomeDummyData.swift */,
 				F6FAA9402EC6F9F000CBFA73 /* HomeLayoutFactory.swift */,
 				F6FAA9262EC6F48D00CBFA73 /* Category */,
 				F6FAA9272EC6F49600CBFA73 /* Brand */,
-				F6FAA9282EC6F49C00CBFA73 /* Ranking */,
-				F6FAA9292EC6F4A400CBFA73 /* Recent */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,20 +271,6 @@
 				F6FAA93C2EC6F9BF00CBFA73 /* BrandCell.swift */,
 			);
 			path = Brand;
-			sourceTree = "<group>";
-		};
-		F6FAA9282EC6F49C00CBFA73 /* Ranking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Ranking;
-			sourceTree = "<group>";
-		};
-		F6FAA9292EC6F4A400CBFA73 /* Recent */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Recent;
 			sourceTree = "<group>";
 		};
 		F6FAA9422EC6FB0600CBFA73 /* TabbarView */ = {
@@ -405,9 +401,13 @@
 				F6FAA93D2EC6F9BF00CBFA73 /* BrandCell.swift in Sources */,
 				F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */,
 				F6FAA94E2EC721B800CBFA73 /* CategoryPageCell.swift in Sources */,
+				F60B50162EDEEFD2004278B8 /* StoreSectionCell.swift in Sources */,
+				F60B50142EDEEF42004278B8 /* Reusable+Dequeuable.swift in Sources */,
 				F6FAA9242EC6DE6500CBFA73 /* SearchBar.swift in Sources */,
 				F6EF2EAC2EAF68F400ACCFA2 /* BaseViewController.swift in Sources */,
 				F6FAA9442EC7061D00CBFA73 /* HomeDummyData.swift in Sources */,
+				F60B50182EDEEFE8004278B8 /* StoreSectionHeaderView.swift in Sources */,
+				F60B501C2EDEF003004278B8 /* StorePreviewItem.swift in Sources */,
 				F66D24122EAE50CA00DB549E /* String+.swift in Sources */,
 				F66D23C42EACABEA00DB549E /* SceneDelegate.swift in Sources */,
 			);
@@ -440,6 +440,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +471,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -596,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

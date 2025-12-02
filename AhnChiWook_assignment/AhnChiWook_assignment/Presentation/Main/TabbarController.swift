@@ -33,6 +33,12 @@ final class TabbarController: UITabBarController {
         viewControllers = [homeVC, shopVC, dibVC, orderVC, myPageVC]
         
         self.tabBar.tintColor = .baeminMint500
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .baeminWhite
+
+        tabBar.standardAppearance = appearance
+        tabBar.scrollEdgeAppearance = tabBar.standardAppearance
     }
 }
 
