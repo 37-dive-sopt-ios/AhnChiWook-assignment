@@ -29,6 +29,10 @@
 		F66D24102EAE413A00DB549E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D240F2EAE413200DB549E /* LoginViewController.swift */; };
 		F66D24122EAE50CA00DB549E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D24112EAE50C600DB549E /* String+.swift */; };
 		F67D12222EB28AFB00C510C7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */; };
+		F6AA93F62EE02E7C002CD4EF /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA93F52EE02E7C002CD4EF /* WelcomeViewModel.swift */; };
+		F6AA93F82EE02E8C002CD4EF /* WelcomeViewController_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA93F72EE02E8C002CD4EF /* WelcomeViewController_Combine.swift */; };
+		F6AA93FA2EE0316B002CD4EF /* LoginViewController_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA93F92EE0316B002CD4EF /* LoginViewController_Combine.swift */; };
+		F6AA93FC2EE03230002CD4EF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA93FB2EE03230002CD4EF /* LoginViewModel.swift */; };
 		F6ED9FB32EB4317C00AC1470 /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = F6ED9FB22EB4317C00AC1470 /* SkyFloatingLabelTextField */; };
 		F6ED9FF42EB4DFE100AC1470 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED9FF32EB4DFE100AC1470 /* CustomTextField.swift */; };
 		F6EF2EAC2EAF68F400ACCFA2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EF2EAB2EAF68F400ACCFA2 /* BaseViewController.swift */; };
@@ -57,6 +61,10 @@
 		F66D240F2EAE413200DB549E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F66D24112EAE50C600DB549E /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		F6AA93F52EE02E7C002CD4EF /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		F6AA93F72EE02E8C002CD4EF /* WelcomeViewController_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Combine.swift; sourceTree = "<group>"; };
+		F6AA93F92EE0316B002CD4EF /* LoginViewController_Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Combine.swift; sourceTree = "<group>"; };
+		F6AA93FB2EE03230002CD4EF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F6ED9FF32EB4DFE100AC1470 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F6EF2EAB2EAF68F400ACCFA2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 		F66D240E2EAE410200DB549E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F6AA93F42EE023BD002CD4EF /* Combine */,
 				F66D240F2EAE413200DB549E /* LoginViewController.swift */,
 				F6EF2EAD2EAF6D0E00ACCFA2 /* WelcomeViewController.swift */,
 			);
@@ -161,6 +170,17 @@
 				F67D12212EB28AFB00C510C7 /* CustomNavigationBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F6AA93F42EE023BD002CD4EF /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				F6AA93FB2EE03230002CD4EF /* LoginViewModel.swift */,
+				F6AA93F92EE0316B002CD4EF /* LoginViewController_Combine.swift */,
+				F6AA93F72EE02E8C002CD4EF /* WelcomeViewController_Combine.swift */,
+				F6AA93F52EE02E7C002CD4EF /* WelcomeViewModel.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 		F6EF2EAA2EAF68BC00ACCFA2 /* Base */ = {
@@ -263,11 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6AA93FA2EE0316B002CD4EF /* LoginViewController_Combine.swift in Sources */,
 				F6EF2EAE2EAF6D1500ACCFA2 /* WelcomeViewController.swift in Sources */,
+				F6AA93F62EE02E7C002CD4EF /* WelcomeViewModel.swift in Sources */,
 				F6ED9FF42EB4DFE100AC1470 /* CustomTextField.swift in Sources */,
 				F66D24102EAE413A00DB549E /* LoginViewController.swift in Sources */,
 				F66D240C2EAE35B700DB549E /* UIView+.swift in Sources */,
 				F66D24082EAE338400DB549E /* UIFont+.swift in Sources */,
+				F6AA93F82EE02E8C002CD4EF /* WelcomeViewController_Combine.swift in Sources */,
+				F6AA93FC2EE03230002CD4EF /* LoginViewModel.swift in Sources */,
 				F67D12222EB28AFB00C510C7 /* CustomNavigationBar.swift in Sources */,
 				F66D240A2EAE356A00DB549E /* UITextField+.swift in Sources */,
 				F66D23C32EACABEA00DB549E /* AppDelegate.swift in Sources */,
