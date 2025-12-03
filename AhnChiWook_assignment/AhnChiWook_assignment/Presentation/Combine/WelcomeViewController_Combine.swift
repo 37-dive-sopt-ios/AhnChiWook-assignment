@@ -14,16 +14,14 @@ import Then
 final class WelcomeViewController_Combine: BaseViewController {
 
     // MARK: - Properties
+    
     private let viewModel: WelcomeViewModel
     private var cancellables = Set<AnyCancellable>()
-
-    // Input Subjects
     private let backTappedSubject = PassthroughSubject<Void, Never>()
-
-    // Completion
     var loginDataCompletion: (() -> Void)?
 
     // MARK: - Init
+    
     init(email: String) {
         self.viewModel = WelcomeViewModel(email: email)
         super.init(nibName: nil, bundle: nil)
@@ -31,7 +29,8 @@ final class WelcomeViewController_Combine: BaseViewController {
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
-    // UI
+    // MARK: - UI Components
+    
     private lazy var naviBar = CustomNavigationBar().then {
         $0.setTitle("대체 뼈찜 누가 시켰어!!")
     }
@@ -62,6 +61,7 @@ final class WelcomeViewController_Combine: BaseViewController {
 
 
     // MARK: - LifeCycle
+    
     override func setStyle() {
         super.setStyle()
         bindViewModel()
@@ -114,14 +114,12 @@ final class WelcomeViewController_Combine: BaseViewController {
 
         let output = viewModel.transform(input)
 
-        // 텍스트 바인딩
         output.welcomeText
             .sink { [weak self] text in
                 self?.hiLabel.text = text
             }
             .store(in: &cancellables)
 
-        // pop 이벤트 처리
         output.popEvent
             .sink { [weak self] in
                 self?.navigationController?.popViewController(animated: true)

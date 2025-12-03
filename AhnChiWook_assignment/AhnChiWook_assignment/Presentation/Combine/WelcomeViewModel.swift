@@ -11,28 +11,33 @@ import Combine
 final class WelcomeViewModel {
     
     // MARK: - Input
+    
     struct Input {
         let backButtonTapped: AnyPublisher<Void, Never>
     }
     
     // MARK: - Output
+    
     struct Output {
         let welcomeText: AnyPublisher<String, Never>
         let popEvent: AnyPublisher<Void, Never>
     }
     
     // MARK: - Private subjects
+    
     private let emailSubject: CurrentValueSubject<String, Never>
     private let popEventSubject = PassthroughSubject<Void, Never>()
     
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
+    
     init(email: String) {
         self.emailSubject = CurrentValueSubject(email)
     }
     
     // MARK: - Transform
+    
     func transform(_ input: Input) -> Output {
         
         input.backButtonTapped

@@ -31,7 +31,7 @@ final class LoginViewController_Combine: BaseViewController {
     
     var shouldResetFields = false
     
-    // MARK: - UI Components (그대로 사용)
+    // MARK: - UI Components
     
     private lazy var naviBar = CustomNavigationBar().then {
         $0.setTitle("이메일 또는 아이디로 계속")
@@ -196,7 +196,6 @@ final class LoginViewController_Combine: BaseViewController {
 
         let output = viewModel.transform(input)
 
-        // 로그인 버튼 활성화
         output.isLoginEnabled
             .sink { [weak self] enabled in
                 self?.loginButton.isEnabled = enabled
@@ -204,7 +203,6 @@ final class LoginViewController_Combine: BaseViewController {
             }
             .store(in: &cancellables)
 
-        // secureTextEntry 변경
         output.isSecureMode
             .sink { [weak self] secure in
                 self?.passwordTextField.isSecureTextEntry = secure
@@ -212,7 +210,6 @@ final class LoginViewController_Combine: BaseViewController {
             }
             .store(in: &cancellables)
         
-        // clear/secure 버튼 show & hide
         output.shouldShowClearButtons
             .sink { [weak self] show in
                 self?.clearButton.isHidden = !show
@@ -223,14 +220,12 @@ final class LoginViewController_Combine: BaseViewController {
             }
             .store(in: &cancellables)
 
-        // 로그인 성공
         output.loginSuccess
             .sink { [weak self] email in
                 self?.pushToWelcome(email)
             }
             .store(in: &cancellables)
 
-        // 로그인 에러
         output.loginError
             .sink { [weak self] message in
                 self?.view.makeToast(message)

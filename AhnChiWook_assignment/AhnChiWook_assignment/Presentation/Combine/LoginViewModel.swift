@@ -12,6 +12,7 @@ import Combine
 final class LoginViewModel {
 
     // MARK: - Input
+    
     struct Input {
         let emailText: AnyPublisher<String, Never>
         let passwordText: AnyPublisher<String, Never>
@@ -21,6 +22,7 @@ final class LoginViewModel {
     }
 
     // MARK: - Output
+    
     struct Output {
         let isLoginEnabled: AnyPublisher<Bool, Never>
         let isSecureMode: AnyPublisher<Bool, Never>
@@ -30,6 +32,7 @@ final class LoginViewModel {
     }
 
     // MARK: - Subjects
+    
     private let emailSubject = CurrentValueSubject<String, Never>("")
     private let passwordSubject = CurrentValueSubject<String, Never>("")
     private let isSecureSubject = CurrentValueSubject<Bool, Never>(true)
